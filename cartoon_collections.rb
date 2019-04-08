@@ -1,13 +1,14 @@
 def roll_call_dwarves (array)
-  array.each_with_index do |index, name|
-    puts "#{index+1}. #{name}"
+  array.each_with_index do |i, name|
+    puts "#{i+1}. #{name}"
   end
 end
 
 def summon_captain_planet (array)
   new_array = []
   array.collect do |w|
-  w[0].upcase
+  w = w.capitalize
+  w << "!"
   new_array << w
   end
   new_array
